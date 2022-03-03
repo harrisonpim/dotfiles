@@ -1,27 +1,7 @@
-export ZSH="/Users/pimh/.oh-my-zsh"
+export ZSH=$(echo ~/.oh-my-zsh)
+export PATH=$PATH":$HOME:$HOME/bin:/usr/local/bin"
 
 ZSH_THEME="robbyrussell"
-SPACESHIP_GIT_SYMBOL=""
-SPACESHIP_TIME_SHOW=true
-SPACESHIP_VENV_SHOW=false
-SPACESHIP_CONDA_SHOW=false
-SPACESHIP_PYENV_SHOW=false
-SPACESHIP_EXEC_TIME_SHOW=false
-SPACESHIP_BATTERY_SHOW=false
-SPACESHIP_GIT_STATUS_SHOW=false
-SPACESHIP_PACKAGE_SHOW=false
-SPACESHIP_NODE_SHOW=false
-SPACESHIP_RUBY_SHOW=false
-SPACESHIP_PHP_SHOW=false
-SPACESHIP_PYTHON_SHOW=false
-SPACESHIP_RUST_SHOW=false
-SPACESHIP_GO_SHOW=false
-SPACESHIP_VENV_SHOW=false
-SPACESHIP_KUBECTL_SHOW=false
-SPACESHIP_EMBER_SHOW=false
-SPACESHIP_DOCKER_SHOW=false
-HIST_STAMPS="yyyy-mm-dd"
-
 
 plugins=(
   git
@@ -31,13 +11,14 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
+# theme
+eval "$(starship init zsh)"
+
 # aliases
-alias python='/usr/local/bin/python3'
-alias git='/usr/local/bin/git'
 alias tf="terraform"
 alias c="code ."
 alias ij="idea ."
-alias bloop="/Users/pimh/.bloop/bloop"
+alias bloop="~/.bloop/bloop"
 alias j="jupyter lab &"
 alias readme="python -m rich.markdown README.md -w 80"
 alias generate-password='python -c "import secrets; print(secrets.token_urlsafe(32))"'
@@ -50,19 +31,9 @@ alias yeet='push'
 alias main='git checkout main' 
 
 
-fpath=($fpath "/Users/pimh/.zfunctions")
 
-# Set Spaceship ZSH as a prompt
-autoload -U promptinit; promptinit
-prompt spaceship
-
-eval "$(rbenv init -)"
-
+# jump around with z
 . ~/z.sh
-export PATH=$PATH":$HOME/bin"
-autoload -Uz compinit
-zstyle ':completion:*' menu select
-fpath+=~/.zfunc
 
 
 # set iterm2 tab title
