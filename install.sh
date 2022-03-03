@@ -16,4 +16,7 @@ ln -s $GIT_ROOT/files/.zshrc ~/.zshrc
 rm -f ~/Library/Preferences/com.googlecode.iterm2.plist
 ln -s $GIT_ROOT/files/com.googlecode.iterm2.plist ~/Library/Preferences/com.googlecode.iterm2.plist
 
+# silence the 'last login' message
+touch ~/.hushlogin
+
 echo "Done!"

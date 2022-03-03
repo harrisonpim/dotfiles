@@ -42,4 +42,3 @@ Everything I want when setting up a new machine
   - <https://formulae.brew.sh/formula/node>
 - yarn
   - <https://yarnpkg.com/> run `corepack enable`
-- set python and pip to 3
