@@ -1,5 +1,7 @@
 echo "Installing packages..."
-brew install zsh-autosuggestions zsh-syntax-highlighting starship > /dev/null 2>&1
+brew install starship > /dev/null 2>&1
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting > /dev/null 2>&1
+git clone https://github.com/zsh-users/zsh-autosuggestions.git ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions > /dev/null 2>&1
 
 GIT_ROOT=$(git rev-parse --show-toplevel)
 

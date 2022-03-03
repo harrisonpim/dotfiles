@@ -1,9 +1,11 @@
 format="$time$directory$git_branch$status$character"
 
+[directory]
+format="in [$path]($style)[$read_only]($read_only_style) "
+
 [character]
 success_symbol="\n[➜](bold green)"
 error_symbol="\n[➜](bold red)"
-
 
 [time]
 format="[$time]($style) "
@@ -12,8 +14,6 @@ disabled=false
 [git_branch]
 symbol=""
 
-[directory]
-format="in [$path]($style)[$read_only]($read_only_style) "
 
 [package]
 disabled=true

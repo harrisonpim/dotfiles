@@ -1,5 +1,5 @@
 export ZSH=$(echo ~/.oh-my-zsh)
-export PATH=$PATH":$HOME:$HOME/bin:/usr/local/bin"
+export PATH=$PATH":$HOME:$HOME/bin:/usr/local/bin:/usr/bin/python3"
 
 ZSH_THEME="robbyrussell"
 
@@ -11,7 +11,7 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
-# theme
+# starship theme
 eval "$(starship init zsh)"
 
 # aliases
@@ -29,7 +29,8 @@ alias groot='cd $(git rev-parse --show-toplevel)'
 alias get='git fetch && git pull && git branch --merged | egrep -v "(^\*master|main)" | xargs git branch -d'
 alias yeet='push' 
 alias main='git checkout main' 
-
+alias pip="/usr/bin/pip3"
+alias python="/usr/bin/python3"
 
 
 # jump around with z

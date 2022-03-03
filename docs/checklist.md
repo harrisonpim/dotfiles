@@ -6,14 +6,16 @@ Everything I want when setting up a new machine
   - <https://brew.sh/>
 - vscode
   - <https://code.visualstudio.com/docs/setup/mac>
+  - <https://code.visualstudio.com/docs/editor/settings-sync>
+  - <https://code.visualstudio.com/docs/setup/mac>
 - docker
   - <https://docs.docker.com/desktop/mac/install/>
 - iterm
   - <https://iterm2.com/>
-- zsh
-  - <https://ohmyz.sh/#install>
-- spaceship
-  - <https://github.com/spaceship-prompt/spaceship-prompt#installing>
+- powerline fonts
+  - <https://fmacedoo.medium.com/oh-my-zsh-with-powerline-fonts-pretty-simple-as-you-deserve-fbe7f6d23723>
+- oh-my-zsh
+  - <https://ohmyz.sh/>
 - gh
   - <https://cli.github.com/>
 - git
@@ -40,7 +42,4 @@ Everything I want when setting up a new machine
   - <https://formulae.brew.sh/formula/node>
 - yarn
   - <https://yarnpkg.com/> run `corepack enable`
-- powerline fonts 
-  - <https://fmacedoo.medium.com/oh-my-zsh-with-powerline-fonts-pretty-simple-as-you-deserve-fbe7f6d23723>
-- oh-my-zsh
-  - <https://ohmyz.sh/>
+- set python and pip to 3
