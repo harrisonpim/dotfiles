@@ -1,6 +1,7 @@
-export ZSH=$(echo ~/.oh-my-zsh)
 export PATH=$PATH":$HOME:$HOME/bin:/usr/local/bin:/usr/bin/python3:$HOME/Library/Python/3.8/lib/python/site-packages"
 typeset -U path
+
+source ~/.oh-my-zsh/oh-my-zsh.sh
 
 ZSH_THEME="robbyrussell"
 
@@ -9,8 +10,6 @@ plugins=(
   zsh-autosuggestions
   zsh-syntax-highlighting
 )
-
-source $ZSH/oh-my-zsh.sh
 
 # starship theme
 eval "$(starship init zsh)"
@@ -36,7 +35,6 @@ alias pip3='/opt/homebrew/bin/pip3'
 
 # jump around with z
 . ~/z.sh
-
 
 # set iterm2 tab title
 DISABLE_AUTO_TITLE="true"
