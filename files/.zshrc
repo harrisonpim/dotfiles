@@ -1,5 +1,6 @@
 export ZSH=$(echo ~/.oh-my-zsh)
-export PATH=$PATH":$HOME:$HOME/bin:/usr/local/bin:/usr/bin/python3"
+export PATH=$PATH":$HOME:$HOME/bin:/usr/local/bin:/usr/bin/python3:$HOME/Library/Python/3.8/lib/python/site-packages"
+typeset -U path
 
 ZSH_THEME="robbyrussell"
 
@@ -26,12 +27,12 @@ alias clean-python='isort ./**/*.py; black . --line-length 80; flake8 . --max-li
 alias aaa='aws-azure-login --profile default --no-prompt' 
 alias push='git push -u origin head'
 alias groot='cd $(git rev-parse --show-toplevel)'
+alias gs='git status'
 alias get='git fetch && git pull && git branch --merged | egrep -v "(^\*master|main)" | xargs git branch -d'
 alias yeet='push' 
-alias main='git checkout main' 
-alias pip="/usr/bin/pip3"
-alias python="/usr/bin/python3"
-
+alias main='git checkout main'
+alias python='/opt/homebrew/bin/python3'
+alias pip3='/opt/homebrew/bin/pip3'
 
 # jump around with z
 . ~/z.sh
