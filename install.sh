@@ -9,6 +9,7 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 
 echo "Installing packages with pip..."
 /opt/homebrew/bin/pip3 install -qqU pip 
+/opt/homebrew/bin/pip-compile files/requirements.in --output-file=files/requirements.txt --quiet
 /opt/homebrew/bin/pip3 install -qqr files/requirements.txt
 
 ROOT="$(git rev-parse --show-toplevel)"
