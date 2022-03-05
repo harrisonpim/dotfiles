@@ -1,3 +1,14 @@
+CASKS=0
+for arg in "$@"
+do
+    case $arg in
+        --casks)
+        CASKS=1
+        shift
+        ;;
+    esac
+done
+
 if ! command -v brew &> /dev/null; then
   echo "Installing homebrew..."
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -5,6 +16,12 @@ fi
 
 echo "Installing packages with brew..."
 brew bundle --file=files/Brewfile
+
+# if the user has added the --casks flag, install cask apps
+if [ $CASKS -eq 1 ]; then
+  echo "Installing cask apps..."
+  brew bundle --file=files/Brewfile.casks
+fi
 
 if ! command -v omz &> /dev/null; then
   echo "Installing oh-my-zsh..."

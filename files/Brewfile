@@ -1,4 +1,3 @@
-# Packages
 brew "awscli"
 brew "gh"
 brew "git"
@@ -19,11 +18,3 @@ brew "z"
 brew "zsh-autosuggestions"
 brew "zsh-syntax-highlighting"
 brew "zsh"
-
-# # Casks
-# cask "docker"
-# cask "google-chrome"
-# cask "iterm2"
-# cask "spotify"
-# cask "transmission"
-# cask "visual-studio-code"

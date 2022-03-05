@@ -2,10 +2,10 @@
 
 I've built up a lot of custom [dotfiles](https://missing.csail.mit.edu/2019/dotfiles/) over the years. This repo is an attempt to capture all of that config, and make it quickly transferrable to new/remote machines.
 
-
-
-## Using this repo
+## Installing
 
 ```sh
 sh ./install.sh
 ```
+
+To install [additional software via cask](./files/Brewfile.cask), add the `--casks` flag to the install command.
