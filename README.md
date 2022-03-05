@@ -5,7 +5,7 @@ I've built up a lot of custom [dotfiles](https://missing.csail.mit.edu/2019/dotf
 ## Installing
 
 ```sh
-sh ./install.sh
+sh install.sh
 ```
 
 To install [additional software via cask](./files/Brewfile.casks), add the `--casks` flag to the install command.
