@@ -1,11 +1,16 @@
-echo "Installing homebrew..."
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+if ! command -v brew &> /dev/null; then
+  echo "Installing homebrew..."
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+fi
 
 echo "Installing packages with brew..."
 brew bundle --file=files/Brewfile
 
-echo "Installing oh-my-zsh..."
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+if ! command -v omz &> /dev/null; then
+  echo "Installing oh-my-zsh..."
+  sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+fi
+
 
 echo "Installing fonts..."
 (
@@ -34,6 +39,7 @@ else
 fi
 
 echo "Setting git config..."
+cp $ROOT/files/.gitconfig.clean $ROOT/files/.gitconfig
 ln -sF $ROOT/files/.gitconfig $HOME/.gitconfig
 nbstripout --install --global > /dev/null 2>&1
 dotenv-stripout install --global > /dev/null 2>&1

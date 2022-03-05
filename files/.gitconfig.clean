@@ -1,0 +1,14 @@
+[user]
+	name = harrisonpim
+	email = hello@harrisonpim.com
+[credential]
+    helper = cache
+[core]
+	excludesfile = ~/.gitignore
+	editor = code
+[init]
+    defaultBranch = main
+[pull]
+    rebase = false
+[fetch]
+	prune = true
