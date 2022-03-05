@@ -16,13 +16,19 @@ ROOT="$(git rev-parse --show-toplevel)"
 
 echo "Setting cli config..."
 mkdir -p $HOME/.config
-rm -f $HOME/.config/starship.toml
-ln -s $ROOT/files/starship.toml $HOME/.config/starship.toml
+ln -sF $ROOT/files/starship.toml $HOME/.config/starship.toml
+ln -sF $ROOT/files/.zshrc $HOME/.zshrc
+ln -sF $ROOT/files/com.googlecode.iterm2.plist $HOME/Library/Preferences/com.googlecode.iterm2.plist
 
-rm -f $HOME/.zshrc
-ln -s $ROOT/files/.zshrc $HOME/.zshrc
+if gh auth status > /dev/null 2>&1 ; then
+    echo "GitHub already configured"
+else
+    gh auth login
+fi
 
-rm -f $HOME/Library/Preferences/com.googlecode.iterm2.plist
-ln -s $ROOT/files/com.googlecode.iterm2.plist $HOME/Library/Preferences/com.googlecode.iterm2.plist
+echo "Setting git config..."
+ln -sF $ROOT/files/.gitconfig $HOME/.gitconfig
+nbstripout --install --global > /dev/null 2>&1
+dotenv-stripout install --global > /dev/null 2>&1
 
 echo "Done!"
