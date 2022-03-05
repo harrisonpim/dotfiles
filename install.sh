@@ -4,8 +4,15 @@ echo "Installing homebrew..."
 echo "Installing packages with brew..."
 brew bundle --file=files/Brewfile
 
-echo "Installing oh-my-zsh"
+echo "Installing oh-my-zsh..."
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+echo "Installing fonts..."
+(
+    git clone https://github.com/powerline/fonts.git && 
+    sh ./fonts/install.sh && 
+    rm -rf ./fonts
+) > /dev/null 2>&1
 
 echo "Installing packages with pip..."
 /opt/homebrew/bin/pip3 install -qqU pip 

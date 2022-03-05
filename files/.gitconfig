@@ -12,3 +12,11 @@
     rebase = false
 [fetch]
 	prune = true
+[filter "nbstripout"]
+	clean = \"/opt/homebrew/opt/python@3.9/bin/python3.9\" -m nbstripout
+	smudge = cat
+[diff "ipynb"]
+	textconv = \"/opt/homebrew/opt/python@3.9/bin/python3.9\" -m nbstripout -t
+[filter "dotenvstripout"]
+	smudge = cat
+	clean = \"/opt/homebrew/opt/python@3.9/bin/python3.9\" -m dotenv_stripout --stdin
