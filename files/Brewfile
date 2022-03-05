@@ -1,4 +1,5 @@
 # Packages
+brew "awscli"
 brew "gh"
 brew "git"
 brew "httpie"
@@ -7,6 +8,7 @@ brew "jrnl"
 brew "node"
 brew "rbenv"
 brew "starship"
+brew "stripe/stripe-cli/stripe"
 brew "tree"
 brew "wget"
 brew "yarn"
