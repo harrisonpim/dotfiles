@@ -8,4 +8,4 @@ I've built up a lot of custom [dotfiles](https://missing.csail.mit.edu/2019/dotf
 sh install.sh
 ```
 
-To install [additional software via cask](./files/Brewfile.cask), add the `--casks` flag to the install command.
+To install [additional software via cask](./files/Brewfile.casks), add the `--casks` flag to the install command.
