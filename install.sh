@@ -58,6 +58,7 @@ fi
 echo "Setting git config..."
 cp $ROOT/files/.gitconfig.clean $ROOT/files/.gitconfig
 ln -sF $ROOT/files/.gitconfig $HOME/.gitconfig
+ln -sF $ROOT/files/.gitignore $HOME/.gitignore
 nbstripout --install --global > /dev/null 2>&1
 dotenv-stripout install --global > /dev/null 2>&1
 
