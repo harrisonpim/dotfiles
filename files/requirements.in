@@ -1,3 +1,5 @@
 dotenv-stripout
+flake8
+isort
 nbstripout
 rich

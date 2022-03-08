@@ -36,10 +36,12 @@ echo "Installing fonts..."
     rm -rf ./fonts
 ) > /dev/null 2>&1
 
+alias python=$(brew --prefix python@3.10)/bin/python3.10
+
 echo "Installing packages with pip..."
-/opt/homebrew/bin/pip3 install -qqU pip 
-/opt/homebrew/bin/pip-compile files/requirements.in --output-file=files/requirements.txt --quiet
-/opt/homebrew/bin/pip3 install -qqr files/requirements.txt
+python -m pip install -qqU pip 
+pip-compile files/requirements.in --output-file=files/requirements.txt --quiet
+python -m pip install -qqr files/requirements.txt
 
 ROOT="$(git rev-parse --show-toplevel)"
 
