@@ -1,3 +1,6 @@
+tap "sniptt-official/tap"
+brew "snip"
+
 brew "awscli"
 brew "gh"
 brew "httpie"
