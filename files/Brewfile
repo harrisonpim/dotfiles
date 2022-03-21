@@ -1,6 +1,5 @@
 brew "awscli"
 brew "gh"
-brew "git"
 brew "httpie"
 brew "jq"
 brew "jrnl"
