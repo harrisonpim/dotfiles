@@ -2,6 +2,11 @@ export pythonpath=$(brew --prefix python@3.10)/bin/python3.10
 export PATH=$PATH":$HOME:$HOME/bin:/usr/local/opt:/usr/local/bin:$pythonpath"
 typeset -U path
 
+# nvm
+  export NVM_DIR="$HOME/.nvm"
+  [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+
 source ~/.oh-my-zsh/oh-my-zsh.sh
 
 ZSH_THEME="robbyrussell"
