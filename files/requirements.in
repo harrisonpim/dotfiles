@@ -1,3 +1,5 @@
 dotenv-stripout
 nbstripout
 rich
+ipython
+jupyterlab

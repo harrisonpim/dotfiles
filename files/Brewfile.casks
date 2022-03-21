@@ -1,6 +1,8 @@
+cask "anki"
 cask "docker"
 cask "google-chrome"
 cask "iterm2"
+cask "mactex"
 cask "spotify"
 cask "transmission"
 cask "visual-studio-code"
